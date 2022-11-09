@@ -288,6 +288,7 @@
                     <connections>
                         <outlet property="calculatorScreen" destination="gC2-i9-XzD" id="wcG-KB-N3M"/>
                         <outlet property="clearButton" destination="4Xg-es-CLv" id="tRt-4h-hpl"/>
+                        <outlet property="percentageButton" destination="ghE-zu-oK9" id="Su0-5q-h6N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3E-z2-QY8" sceneMemberID="firstResponder"/>

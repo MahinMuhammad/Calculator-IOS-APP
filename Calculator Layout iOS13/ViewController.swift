@@ -4,6 +4,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var calculatorScreen: UILabel!
     @IBOutlet weak var clearButton: UIButton!
+    @IBOutlet weak var percentageButton: UIButton!
     var number1 = 0
     var number2 = 0
     var operation = ""
@@ -53,6 +54,7 @@ class ViewController: UIViewController {
             operation = sender.currentTitle!
             nextNumber = true
             percentageOn = false
+            percentageButton.alpha = 1.0
         }
         else if(number2 == 0){
             number2 = Int(calculatorScreen.text!)!
@@ -90,6 +92,7 @@ class ViewController: UIViewController {
             number2 = 0
             operation = sender.currentTitle!
             percentageOn = false
+            percentageButton.alpha = 1.0
         }
         animate(sender: sender)
     }
@@ -101,7 +104,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func percentagePressed(_ sender: UIButton) {
-        percentageOn = true
+        if(percentageOn == false){
+            percentageOn = true
+            sender.alpha = 0.5
+        }
+        else{
+            percentageOn = false
+            sender.alpha = 1.0
+        }
+        
     }
     
     func animate(sender: UIButton){
