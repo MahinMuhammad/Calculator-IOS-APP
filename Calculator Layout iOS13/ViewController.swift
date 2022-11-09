@@ -87,7 +87,14 @@ class ViewController: UIViewController {
             default:
                 break
             }
-            calculatorScreen.text = String(result)
+            
+            if(floor(result)==result){                      // not to display only zero after decimal marker
+                calculatorScreen.text = String(Int(result))
+            }
+            else{
+                calculatorScreen.text = String(result) // displays result
+            }
+            
             nextNumber = true
             number1 = result
             number2 = 0
@@ -99,9 +106,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func plusMinusButton(_ sender: UIButton) {
-        var number = Int(calculatorScreen.text!)!
+        var number = Double(calculatorScreen.text!)!
         number = 0 - number
-        calculatorScreen.text = String(number)
+        if(floor(number)==number){                      // not to display only zero after decimal marker
+            calculatorScreen.text = String(Int(number))
+        }
+        else{
+            calculatorScreen.text = String(number) // displays result
+        }
     }
     
     @IBAction func percentagePressed(_ sender: UIButton) {
