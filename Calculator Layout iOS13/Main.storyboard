@@ -281,6 +281,7 @@
                     </view>
                     <connections>
                         <outlet property="calculatorScreen" destination="gC2-i9-XzD" id="wcG-KB-N3M"/>
+                        <outlet property="clearButton" destination="4Xg-es-CLv" id="tRt-4h-hpl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3E-z2-QY8" sceneMemberID="firstResponder"/>

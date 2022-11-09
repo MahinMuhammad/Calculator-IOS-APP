@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var calculatorScreen: UILabel!
+    @IBOutlet weak var clearButton: UIButton!
     var number1 = 0
     var number2 = 0
     var operation = ""
@@ -26,6 +27,7 @@ class ViewController: UIViewController {
         if(calculatorScreen.text?.trimmingCharacters(in: .whitespaces) == "0" || nextNumber == true){
             calculatorScreen.text = String(number)
             nextNumber = false
+            clearButton.setTitle("C", for: .normal)
         }
         else{
             calculatorScreen.text?.append(String(number))
@@ -34,11 +36,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clearPressed(_ sender: UIButton) {
-        calculatorScreen.text = "0"
+        if(calculatorScreen.text?.trimmingCharacters(in: .whitespaces) != "0"){
+            calculatorScreen.text = "0"
+            number2 = 0
+            sender.setTitle("AC", for: .normal)
+        }
+        else{
+            calculatorScreen.text = "0"
+            number1 = 0
+            number2 = 0
+            operation = ""
+        }
         animate(sender: sender)
-        number1 = 0
-        number2 = 0
-        operation = ""
     }
     
     @IBAction func operatorPressed(_ sender: UIButton) {
@@ -61,13 +70,25 @@ class ViewController: UIViewController {
                 result = number1 - number2
                 break
             case "÷":
-                result = number1 / number2
+                if(number2 == 0){
+                    result = 0
+                }
+                else{
+                    result = number1 / number2
+                }
+                break
+            case "=":
+                result = number1
                 break
             default:
                 break
             }
             calculatorScreen.text = String(result)
+            nextNumber = true
+            number1 = result
+            operation = sender.currentTitle!
         }
+        animate(sender: sender)
     }
     
     func animate(sender: UIButton){
