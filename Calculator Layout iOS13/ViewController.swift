@@ -5,8 +5,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var calculatorScreen: UILabel!
     @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var percentageButton: UIButton!
-    var number1 = 0
-    var number2 = 0
+    var number1: Double = 0
+    var number2: Double = 0
     var operation = ""
     var nextNumber = false
     var percentageOn = false
@@ -47,9 +47,10 @@ class ViewController: UIViewController {
     
     @IBAction func operatorPressed(_ sender: UIButton) {
         if(operation == ""){
-            number1 = Int(calculatorScreen.text!)!
+            number1 = Double(calculatorScreen.text!)!
             if(percentageOn == true){
                 number1 = number1 / 100
+                calculatorScreen.text = String(number1) // to show the first number being / by 100
             }
             operation = sender.currentTitle!
             nextNumber = true
@@ -57,11 +58,11 @@ class ViewController: UIViewController {
             percentageButton.alpha = 1.0
         }
         else if(number2 == 0){
-            number2 = Int(calculatorScreen.text!)!
+            number2 = Double(calculatorScreen.text!)!
             if(percentageOn == true){
                 number2 = number2 / 100
             }
-            var result = 0
+            var result:Double = 0
             switch(operation){
             case "+":
                 result = number1 + number2
@@ -113,6 +114,12 @@ class ViewController: UIViewController {
             sender.alpha = 1.0
         }
         
+    }
+    
+    @IBAction func decimalMarkerPressed(_ sender: UIButton) {
+        if(!calculatorScreen.text!.contains(".")){
+            calculatorScreen.text?.append(".")
+        }
     }
     
     func animate(sender: UIButton){
