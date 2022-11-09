@@ -23,6 +23,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func numberPressed(_ sender: UIButton) {
+        if(operation == "="){
+            operation = ""
+        }
         let number:Int = Int(sender.currentTitle!)!
         if(calculatorScreen.text?.trimmingCharacters(in: .whitespaces) == "0" || nextNumber == true){
             calculatorScreen.text = String(number)
@@ -46,6 +49,7 @@ class ViewController: UIViewController {
             number1 = 0
             number2 = 0
             operation = ""
+            sender.setTitle("AC", for: .normal)
         }
         animate(sender: sender)
     }
@@ -89,6 +93,12 @@ class ViewController: UIViewController {
             operation = sender.currentTitle!
         }
         animate(sender: sender)
+    }
+    
+    @IBAction func plusMinusButton(_ sender: UIButton) {
+        var number = Int(calculatorScreen.text!)!
+        number = 0 - number
+        calculatorScreen.text = String(number)
     }
     
     func animate(sender: UIButton){
