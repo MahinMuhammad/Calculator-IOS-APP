@@ -17,5 +17,11 @@
     <li>build and run the project on virtual or physical ios device</li> 
   </ol>
 <hr>
-<h4>Developed by <br> Md. Mahinur Rahman</h4>
-
+<table style="border:none">
+  <tr>  
+    <td align="center"><img src="Documentation/mahinsLogo.png" height="250" width="250"></h4></td>
+  </tr>
+  <tr>  
+    <td align="center"><h4>Developed by <br> Md. Mahinur Rahman</h4></td>
+  </tr>
+</table>
