@@ -1,4 +1,4 @@
-<h1>Calculator-IOS-APP</h1>
+<h1>Soft Calculator</h1>
 
 <h3>Introduction</h3>
   <p>This is an IOS app. It is a simple calculator app.</p>

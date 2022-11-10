@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="yMB-Nt-Ipj">
             <objects>
-                <viewController id="ey4-0b-agg" customClass="ViewController" customModule="Calculator_Layout_iOS13" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ey4-0b-agg" customClass="ViewController" customModule="Soft_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cux-nb-tfI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -292,6 +292,10 @@
                         <outlet property="calculatorScreen" destination="gC2-i9-XzD" id="wcG-KB-N3M"/>
                         <outlet property="clearButton" destination="4Xg-es-CLv" id="tRt-4h-hpl"/>
                         <outlet property="percentageButton" destination="ghE-zu-oK9" id="Su0-5q-h6N"/>
+                        <outletCollection property="operatorButtons" destination="G64-9b-ycy" collectionClass="NSMutableArray" id="lMh-57-xi9"/>
+                        <outletCollection property="operatorButtons" destination="DbC-GJ-p5L" collectionClass="NSMutableArray" id="sBg-20-0eE"/>
+                        <outletCollection property="operatorButtons" destination="wKr-Ro-rCd" collectionClass="NSMutableArray" id="fmK-tS-mB4"/>
+                        <outletCollection property="operatorButtons" destination="fBd-7N-tqa" collectionClass="NSMutableArray" id="NnM-CO-iGi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b3E-z2-QY8" sceneMemberID="firstResponder"/>

@@ -7,6 +7,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var calculatorScreen: UILabel!
     @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var percentageButton: UIButton!
+    @IBOutlet var operatorButtons: [UIButton]!
     var number1: Double = 0
     var number2: Double = 0
     var operation = ""
@@ -27,6 +28,9 @@ class ViewController: UIViewController {
         }
         else{
             calculatorScreen.text?.append(String(number))
+        }
+        for button in operatorButtons{
+            button.alpha = 1.0
         }
         animate(sender: sender)
         playSound(btn:"calculatorPress")
@@ -106,7 +110,13 @@ class ViewController: UIViewController {
             percentageOn = false
             percentageButton.alpha = 1.0
         }
-        animate(sender: sender)
+//        animate(sender: sender)
+        for button in operatorButtons{
+            button.alpha = 1.0
+        }
+        if(sender.currentTitle != "="){
+            sender.alpha = 0.5
+        }
         playSound(btn:"calculatorPress2")
     }
     
@@ -136,9 +146,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func decimalMarkerPressed(_ sender: UIButton) {
+        //adding . with new numbers zero
+        if(nextNumber == true){
+            calculatorScreen.text = "0."
+            nextNumber = false
+            
+            //increasing opacity for any operator pressed before
+            for button in operatorButtons{
+                button.alpha = 1.0
+            }
+        }
+        
+        //adding . with current displayed number if . is not there already
         if(!calculatorScreen.text!.contains(".")){
             calculatorScreen.text?.append(".")
         }
+        animate(sender: sender)
         playSound(btn:"calculatorPress")
     }
     
@@ -153,6 +176,7 @@ class ViewController: UIViewController {
         let fileType = "wav"
         let url = Bundle.main.url(forResource: btn, withExtension: fileType)
         player = try! AVAudioPlayer(contentsOf: url!)
+        player.volume = 0.1
         player.play()
     }
 
