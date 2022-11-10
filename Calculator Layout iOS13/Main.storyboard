@@ -23,7 +23,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="148.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gC2-i9-XzD">
-                                                <rect key="frame" x="20" y="1" width="374" height="146.5"/>
+                                                <rect key="frame" x="20" y="0.0" width="374" height="148.5"/>
                                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="20"/>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -31,10 +31,10 @@
                                             </label>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="gC2-i9-XzD" firstAttribute="top" secondItem="brN-B5-ZSL" secondAttribute="top" constant="1" id="2x7-Rf-9eB"/>
-                                            <constraint firstItem="gC2-i9-XzD" firstAttribute="leading" secondItem="brN-B5-ZSL" secondAttribute="leading" constant="20" id="L97-h4-cyy"/>
-                                            <constraint firstAttribute="trailing" secondItem="gC2-i9-XzD" secondAttribute="trailing" constant="20" id="ghN-d8-Jzp"/>
-                                            <constraint firstAttribute="bottom" secondItem="gC2-i9-XzD" secondAttribute="bottom" constant="1" id="ibI-8K-y4g"/>
+                                            <constraint firstAttribute="trailing" secondItem="gC2-i9-XzD" secondAttribute="trailing" constant="20" id="BnA-bg-VE8"/>
+                                            <constraint firstItem="gC2-i9-XzD" firstAttribute="leading" secondItem="brN-B5-ZSL" secondAttribute="leading" constant="20" id="Icz-gQ-NqD"/>
+                                            <constraint firstAttribute="bottom" secondItem="gC2-i9-XzD" secondAttribute="bottom" id="UOq-nO-Vny"/>
+                                            <constraint firstItem="gC2-i9-XzD" firstAttribute="top" secondItem="brN-B5-ZSL" secondAttribute="top" id="uOW-xG-8nt"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="QYC-dD-Hy1" userLabel="RowOne">

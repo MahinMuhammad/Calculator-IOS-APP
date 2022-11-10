@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00A4DFD0291CD2770030FDC1 /* calculatorPress2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 00A4DFCE291CD2770030FDC1 /* calculatorPress2.wav */; };
+		00A4DFD1291CD2770030FDC1 /* calculatorPress.wav in Resources */ = {isa = PBXBuildFile; fileRef = 00A4DFCF291CD2770030FDC1 /* calculatorPress.wav */; };
 		AD0C513722CA22D500AADC4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0C513622CA22D500AADC4D /* AppDelegate.swift */; };
 		AD0C513922CA22D500AADC4D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0C513822CA22D500AADC4D /* SceneDelegate.swift */; };
 		AD0C513B22CA22D500AADC4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0C513A22CA22D500AADC4D /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00A4DFCE291CD2770030FDC1 /* calculatorPress2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = calculatorPress2.wav; sourceTree = "<group>"; };
+		00A4DFCF291CD2770030FDC1 /* calculatorPress.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = calculatorPress.wav; sourceTree = "<group>"; };
 		AD0C513322CA22D500AADC4D /* Calculator Layout iOS13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Calculator Layout iOS13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD0C513622CA22D500AADC4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD0C513822CA22D500AADC4D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00A4DFCD291CD2770030FDC1 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				00A4DFCE291CD2770030FDC1 /* calculatorPress2.wav */,
+				00A4DFCF291CD2770030FDC1 /* calculatorPress.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		AD0C512A22CA22D500AADC4D = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +76,7 @@
 				AD0C513F22CA22D800AADC4D /* Assets.xcassets */,
 				AD0C514122CA22D800AADC4D /* LaunchScreen.storyboard */,
 				AD0C514422CA22D800AADC4D /* Info.plist */,
+				00A4DFCD291CD2770030FDC1 /* Sounds */,
 			);
 			path = "Calculator Layout iOS13";
 			sourceTree = "<group>";
@@ -126,6 +140,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD0C515922CA248600AADC4D /* Main.storyboard in Resources */,
+				00A4DFD1291CD2770030FDC1 /* calculatorPress.wav in Resources */,
+				00A4DFD0291CD2770030FDC1 /* calculatorPress2.wav in Resources */,
 				AD0C514322CA22D800AADC4D /* LaunchScreen.storyboard in Resources */,
 				AD0C514022CA22D800AADC4D /* Assets.xcassets in Resources */,
 			);

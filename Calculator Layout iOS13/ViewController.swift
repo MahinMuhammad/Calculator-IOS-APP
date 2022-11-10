@@ -1,7 +1,9 @@
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
+    var player: AVAudioPlayer!
     @IBOutlet weak var calculatorScreen: UILabel!
     @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var percentageButton: UIButton!
@@ -27,6 +29,7 @@ class ViewController: UIViewController {
             calculatorScreen.text?.append(String(number))
         }
         animate(sender: sender)
+        playSound(btn:"calculatorPress")
     }
     
     @IBAction func clearPressed(_ sender: UIButton) {
@@ -43,6 +46,7 @@ class ViewController: UIViewController {
             sender.setTitle("AC", for: .normal)
         }
         animate(sender: sender)
+        playSound(btn:"calculatorPress2")
     }
     
     @IBAction func operatorPressed(_ sender: UIButton) {
@@ -103,6 +107,7 @@ class ViewController: UIViewController {
             percentageButton.alpha = 1.0
         }
         animate(sender: sender)
+        playSound(btn:"calculatorPress2")
     }
     
     @IBAction func plusMinusButton(_ sender: UIButton) {
@@ -114,6 +119,8 @@ class ViewController: UIViewController {
         else{
             calculatorScreen.text = String(number) // displays result
         }
+        playSound(btn:"calculatorPress2")
+        animate(sender: sender)
     }
     
     @IBAction func percentagePressed(_ sender: UIButton) {
@@ -125,13 +132,14 @@ class ViewController: UIViewController {
             percentageOn = false
             sender.alpha = 1.0
         }
-        
+        playSound(btn:"calculatorPress2")
     }
     
     @IBAction func decimalMarkerPressed(_ sender: UIButton) {
         if(!calculatorScreen.text!.contains(".")){
             calculatorScreen.text?.append(".")
         }
+        playSound(btn:"calculatorPress")
     }
     
     func animate(sender: UIButton){
@@ -140,5 +148,13 @@ class ViewController: UIViewController {
             sender.alpha = 1.0
         }
     }
+    
+    func playSound(btn: String) {
+        let fileType = "wav"
+        let url = Bundle.main.url(forResource: btn, withExtension: fileType)
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player.play()
+    }
+
 }
 
