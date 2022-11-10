@@ -41,6 +41,11 @@ class ViewController: UIViewController {
             calculatorScreen.text = "0"
             number2 = 0
             sender.setTitle("AC", for: .normal)
+            for button in operatorButtons{
+                if(button.currentTitle == operation){
+                    button.alpha = 0.5
+                }
+            }
         }
         else{
             calculatorScreen.text = "0"
@@ -48,6 +53,11 @@ class ViewController: UIViewController {
             number2 = 0
             operation = ""
             sender.setTitle("AC", for: .normal)
+            
+            //setting operator button opacity to normal (1.0)
+            for button in operatorButtons{
+                button.alpha = 1.0
+            }
         }
         animate(sender: sender)
         playSound(btn:"calculatorPress2")
