@@ -1,4 +1,4 @@
-<h1>Soft Calculator</h1>
+<h1>Soft Calculator <td align="center"><img src="Documentation/Soft-Cal.png" height="50" width="50"></h4></td></h1>
 
 <h3>Introduction</h3>
   <p>This is an IOS app. It is a simple calculator app.</p>
