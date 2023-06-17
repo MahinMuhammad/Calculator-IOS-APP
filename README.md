@@ -16,6 +16,14 @@
     <li>Open the project in xcode</li>
     <li>build and run the project on virtual or physical ios device</li> 
   </ol>
+  
+<h3>Tech and tools used</h3>
+  <ul>
+    <li>Swift</li>
+    <li>UIKit</li>
+    <li>XCode</li>
+    <li>AVFoundation</li>
+  </ul>
 <hr>
 <table style="border:none">
   <tr>  
