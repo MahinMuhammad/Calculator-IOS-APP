@@ -13,6 +13,11 @@ class ViewController: UIViewController {
     var operation = ""
     var nextNumber = false
     var percentageOn = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
 
     @IBAction func numberPressed(_ sender: UIButton) {
         if(operation == "="){
